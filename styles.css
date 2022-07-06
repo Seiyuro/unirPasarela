@@ -1,0 +1,285 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+figure {
+  display: flex;
+  justify-content: center;
+}
+
+.youtube {
+  background-color: white;
+  width: 25px;
+  height: auto;
+  padding: 2px;
+  margin: 0 1em;
+  border: 1px solid white;
+  border-radius: 4px;
+}
+.mainContainer {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: ghostwhite;
+  flex-direction: column;
+  color: black;
+}
+
+.nameContainer {
+  display: flex;
+  height: 10%;
+  width: 95%;
+  align-self: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 1.5em;
+}
+.playerContainer {
+  display: flex;
+  width: 95%;
+  align-self: center;
+  height: 70%;
+  justify-content: center;
+  border: 1px solid white;
+  background-color: #003399;
+  border-radius: 10px;
+  overflow: auto;
+}
+.player {
+  border-right: 5px solid white;
+  width: 70%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+.list {
+  width: 30%;
+  color: white;
+  justify-content: start;
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  padding: 1em;
+  justify-content: center;
+  display: flex;
+}
+.playpausePlayer {
+  justify-content: center;
+  display: flex;
+  border-radius: 10px;
+
+  /* background-image: url("./images/film-strip.png") no-repeat; */
+}
+.playerSmallScreen {
+  height: 335px;
+  width: 850px;
+  min-width: 500px;
+}
+.playerFullScreen {
+  min-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+  position: relative;
+  margin-right: 7px;
+  font-size: 12px;
+  padding: 3px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.controls button[data-state="play"] {
+  background-image: url("./images/play.svg");
+  margin: 0 5px;
+  background-position: center;
+}
+
+.controls button[data-state="pause"] {
+  background-image: url("./images/pause.svg");
+  background-position: center;
+  margin: 0 5px;
+}
+.controls button[data-state="stop"] {
+  background-image: url("./images/stop.svg");
+  margin: 0 5px;
+  background-position: center;
+}
+.controls button[data-state="mute"] {
+  background-image: url("./images/mute.svg");
+  margin: 0 5px;
+  background-position: center;
+}
+.controls button[data-state="voldown"] {
+  background-image: url("./images/volume-down.svg");
+  margin: 0 5px;
+  background-position: center;
+}
+.controls button[data-state="volup"] {
+  background-image: url("./images/volume-up.svg");
+  margin: 0 5px;
+  background-position: center;
+}
+.controls button[data-state="go-fullscreen"] {
+  background-image: url("./images/full-screen.svg");
+  margin: 0 5px;
+  background-position: center;
+}
+
+.controls button[data-state="unmute"] {
+  background-image: url("./images/unmute.svg");
+  margin: 0 5px;
+  background-position: center;
+}
+.controls button[data-state="fast"] {
+  background-image: url("./images/fast.svg");
+  margin: 0 5px;
+  background-position: center;
+}
+
+.controls button[data-state="slow"] {
+  background-image: url("./images/rewind.svg");
+  margin: 0 5px;
+  background-position: center;
+}
+
+.controls button[data-state="snap"] {
+  background-image: url("./images/snap.svg");
+  margin: 0 5px;
+  background-position: center;
+}
+.controls button[data-state="subtitles"] {
+  background-image: url("./images/cc.svg");
+  margin: 0 5px;
+  background-position: center;
+}
+
+.containerController {
+  width: 75%;
+  margin: 0 auto;
+  background-color: ghostwhite;
+  border-radius: 5px;
+}
+
+.controls > * {
+  float: left;
+  width: 3.90625%;
+  height: 100%;
+  margin-left: 0.1953125%;
+  display: block;
+}
+
+.controls > *:first-child {
+  margin-left: 0;
+}
+
+.controls button {
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  border: none;
+  cursor: pointer;
+  text-indent: -99999px;
+  background: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.controls .progress {
+  cursor: pointer;
+  width: 48%;
+  height: 2.5em;
+}
+.controls progress {
+  display: block;
+  width: 100%;
+  height: 81%;
+  margin-top: 0.125rem;
+  border: none;
+  color: #0095dd;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+.controls[data-state="hidden"] {
+  /* display: none; */
+}
+
+.controls[data-state="visible"] {
+  display: block;
+}
+
+.controls button:hover,
+.controls button:focus {
+  opacity: 0.5;
+}
+
+.controls progress[data-state="fake"] {
+  background: #e6e6e6;
+  height: 65%;
+}
+.controls progress span {
+  width: 0%;
+  height: 100%;
+  display: inline-block;
+  background-color: #2a84cd;
+}
+
+.headerList {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.contentList {
+  width: 90%;
+  background-color: white;
+  min-height: 150px;
+  color: black;
+  margin: 0 auto;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.avengers,
+.batman,
+.flores {
+  display: flex;
+  width: 25%;
+  height: auto;
+  margin: 0 auto;
+  padding: 25px;
+  justify-content: center;
+}
+
+.imgContainer {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+
+.labelContainer {
+  display: flex;
+  width: 75%;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 10px 0;
+}
+
+.titleMovie {
+  font-size: 1.2em;
+  font-weight: bolder;
+}
+
+video::cue {
+  color: yellow;
+}
+
+#output {
+  display: flex;
+  justify-content: center;
+}

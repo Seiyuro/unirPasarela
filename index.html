@@ -1,0 +1,116 @@
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="./scripts.js" defer></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reproductor Julian Serrano</title>
+  </head>
+  <body>
+    <div class="mainContainer">
+      <div class="nameContainer">Francisco Julian Serrano Rodriguez. Trabajo: Crear un reproductor de vídeo utilizando 
+        estándares web</div>
+      <div class="playerContainer">
+        <div class="player">
+          <h3 class="title">
+            <span><img src="./images/youtube.svg" class="youtube" /></span
+            >Reproductor Julian's Tube
+          </h3>
+          <figure id="videoContainer">
+            <video
+              id="video"
+              controls
+              preload="metadata"
+              poster="./images/film-strip.png"
+              height="auto"
+              class="playpausePlayer playerSmallScreen"
+            >
+              <source src="./videos/avengers.mp4" type="video/mp4" />
+              <track  label="Español" kind="subtitles" srclang="es" src="./subtitulos/avengers.vtt">
+            </video>
+          </figure>
+          <div class="containerController">
+            <div id="video-controls" class="controls" data-state="hidden">
+              <button
+                class="play"
+                id="playpause"
+                type="button"
+                data-state="play"
+              >
+                Play/Pause
+              </button>
+              <button class="stop" id="stop" type="button" data-state="stop">
+                Stop
+              </button>
+              <div class="progress">
+                <progress id="progress" value="0" min="0">
+                  <span id="progress-bar"></span>
+                </progress>
+              </div>
+              <button id="mute" type="button" data-state="mute">
+                Mute/Unmute
+              </button>
+              <button id="volinc" type="button" data-state="volup">Vol+</button>
+              <button id="voldec" type="button" data-state="voldown">
+                Vol-
+              </button>
+              <button id="slow" type="button" data-state="slow">
+                Slow
+              </button>
+              <button id="fast" type="button" data-state="fast">
+                Fast
+              </button>
+              <button id="fs" type="button" data-state="go-fullscreen">
+                Fullscreen
+              </button>
+              <button id="subtitles" type="button" data-state="subtitles">CC</button>
+              <button id="snap" data-state="snap" onclick="snap()">Snap Photo</button>
+            </div>
+          </div>
+        </div>
+        <div class="list">
+          <div class="headerList">
+            <h3>Lista de Reproducciones</h3>
+          </div>
+          <div class="contentList">
+            <div id="js-avengers" class=" imgContainer">
+              <div class="avengers"><img src="./images/avengers.svg" /></div>
+              <div class="labelContainer">
+                <span class="titleMovie">Ve el trailer de los avengers!</span>
+                <p class="movieResume">
+                  Los avengers, esta ocasion llegan para pelear contra Thanos!
+                  Podra Captain America, Iron Man y Thor contra esta amenaza
+                </p>
+              </div>
+            </div>
+          </div>
+        </br>
+          <div class="contentList">
+            <div id="js-batman" class=" imgContainer">
+              <div class="batman"><img src="./images/batman.svg" width="100px" height="auto" /></div>
+              <div class="labelContainer">
+                <span class="titleMovie">Batman! v Superman Dawn of Justice</span>
+                <p class="movieResume">
+                  Batman y Superman se enfrentan en una lucha donde solo uno podra salir victorioso, Podra Wonder Woman hacer algo para evitarlo?
+                </p>
+              </div>
+            </div>
+          </div>
+        </br>
+        <div class="contentList">
+          <div id="js-flores" class="imgContainer">
+            <div class="flores"><img src="./images/flower.svg" width="100px" height="auto" /></div>
+            <div class="labelContainer">
+              <span class="titleMovie">Flores para mi Novia!!!</span>
+              <p class="movieResume">
+                Hermosas Floeres para ver!
+              </p>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div id="output"> Screen Shots apareceran aqui</div>
+    </div>
+  </body>
+</html>
